@@ -12,7 +12,12 @@ export default class Slide {
     this.wrapper.addEventListener('mousedown', this.onStart);
   }
 
+  bindEvents() {
+    this.onStart = this.onStart.bind(this);
+  }
+
   init() {
+    this.bindEvents();
     this.addSlideEvent();
     return this;
   }
