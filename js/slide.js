@@ -11,4 +11,9 @@ export default class Slide {
   addSlideEvent() {
     this.wrapper.addEventListener('mousedown', this.onStart);
   }
+
+  init() {
+    this.addSlideEvent();
+    return this;
+  }
 }
